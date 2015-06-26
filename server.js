@@ -30,6 +30,7 @@ function handler (req, res) {
 	}
 
 	res.writeHead(statusCode, {'Content-Type': 'text/plain'});
+	res.write(req.method);
 	res.end();
 }
 
