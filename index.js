@@ -1,7 +1,7 @@
 var app = require('http').createServer(handler);
 var statusCode = 200;
 
-app.listen(9021);
+app.listen(80);
 
 function handler (req, res) {
 	var data = '';
@@ -33,5 +33,5 @@ function handler (req, res) {
 	res.end();
 }
 
-console.log("Listening to port 9021");
+console.log("Listening to port 80");
 console.log("Returning status code " + statusCode.toString());
