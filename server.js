@@ -1,7 +1,9 @@
 var app = require('http').createServer(handler);
 var statusCode = 200;
 
-app.listen(process.env.PORT);
+var port = process.env.PORT || 5000;
+
+app.listen(port);
 
 function handler (req, res) {
 	var data = '';
@@ -34,5 +36,5 @@ function handler (req, res) {
 	res.end();
 }
 
-console.log("Listening to port "+process.env.PORT);
+console.log("Listening to port "+port);
 console.log("Returning status code " + statusCode.toString());
